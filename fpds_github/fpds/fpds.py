@@ -454,9 +454,9 @@ def get_fpds_search_results(initial_search_url = ''):      # return_json = False
 
 
 def write_fpds_results_to_file(results, output_filepath=None):
-    with open(output_filepath, 'w') as file
-    file.write(json.dumps(results, indent=4))
-    file.close()
+    with open(output_filepath, 'w') as file:
+        file.write(json.dumps(results, indent=4))
+    
 
 
 
