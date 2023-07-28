@@ -1,6 +1,5 @@
-from fpds import fpdsRequest 
+from fpds import fpdsRequest
 import json
-
 
 
 request = fpdsRequest(
@@ -12,7 +11,7 @@ request = fpdsRequest(
 records = request()
 
 # writing as JSON
-with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Project Independence\API Downloads\cli_results.json','w') as file:
+with open(r'C:\Users\Administrator\Documents\api_downloads\cdc_run_from_server_5_yr.json', 'w') as file:
     json.dump(records, file)
 
 
@@ -20,7 +19,6 @@ with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Proje
 # with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Project Independence\API Downloads\cli_results.txt','w') as file:
 #     results_as_dict = json.dumps(records,indent=4)
 #     file.write(results_as_dict)
-
 
 
 # Code run python scripts concurrently
