@@ -37,3 +37,6 @@ with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Proje
 # writing as JSON
 with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Project Independence\API Downloads\cli_results.json','w') as file:
     json.dump(records, file)
+
+# Code run python scripts concurrently
+# https://stackoverflow.com/questions/28549641/run-multiple-python-scripts-concurrently
