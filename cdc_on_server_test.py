@@ -2,9 +2,8 @@ from fpds import fpdsRequest
 import json
 
 
-
 request = fpdsRequest(
-    LAST_MOD_DATE="[2018/10/01, 2023/09/30]",
+    LAST_MOD_DATE="[2023-07-01, 2023-07-04]",
     AGENCY_CODE="7523"
 )
 
@@ -12,14 +11,11 @@ request = fpdsRequest(
 records = request()
 
 # writing as JSON
-with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Project Independence\API Downloads\cli_results.json','w') as file:
+with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Project Independence\API Downloads\07_31_test.json','w') as file:
     json.dump(records, file)
 
 
-# # writing as STRING
-# with open(r'C:\Users\johnp\OneDrive - Delphi Consulting Solutions\Delphics\Project Independence\API Downloads\cli_results.txt','w') as file:
-#     results_as_dict = json.dumps(records,indent=4)
-#     file.write(results_as_dict)
+
 
 
 
