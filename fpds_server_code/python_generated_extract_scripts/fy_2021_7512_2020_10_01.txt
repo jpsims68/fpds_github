@@ -1,0 +1,10 @@
+                                                                                                                                         
+                                                                                                                                                          
+    from fpds import fpdsRequest                                                                                                                          
+    import json                                                                                                                                           
+                                                                                                                                                          
+    request = fpdsRequest(LAST_MOD_DATE="[2020/10/01, 2021/09/30]",AGENCY_CODE="7512")
+    records = request()
+    with open(C:\Users\Administrator\Documents\api_downloads\fy_2021_7512_2020_10_01.json, 'w') as file:
+        json.dump(records, file)
+    
