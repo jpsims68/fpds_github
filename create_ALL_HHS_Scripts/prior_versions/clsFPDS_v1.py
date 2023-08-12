@@ -3,7 +3,6 @@ import requests
 
 
 class FPDS:
-    exceptions = []
 
     def __init__(self, agency_code, entry_action_type, date_extract_from, date_extract_thru):
         self.agency_code = agency_code
@@ -33,7 +32,7 @@ class FPDS:
             return self.last_api_link
         else:
             source = requests.get(self.initial_search_url)
-            soup = BeautifulSoup(source.content, 'lxml', features='xml')
+            soup = BeautifulSoup(source.content, 'lxml')
             links = [link.get('href') for link in soup.find_all('link')]
 
             # search soup.links.rel tags for last ... if it is not there then last_api_link = NONE
@@ -92,8 +91,8 @@ class FPDS:
                     file.write(txt)
                     print(str(cntr) + ' of ' + self.last_entry_start_counter)
         except:
-            msg = f'there was an error processing the api_url: {cntr} for agency: {self.agency_code}'
-            self.exceptions.append(msg)
-            print(msg)
+            print(
+                f'there was an error processing the api_urls ... moving on to the next search')
 
-
+        finally:
+            pass
